@@ -16,6 +16,85 @@
 </head>
 
 <body>
+    <div class="container">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="https://pbs.twimg.com/media/Dd1azdtVMAADKxB.jpg" width="30" height="30"
+                    class="d-inline-block align-top" alt="">
+                Multiplayer Rock-Paper-Scissors
+            </a>
+        </nav>
+
+        <br>
+
+        <div class="row text-center">
+            <div class="col-4">
+                <div class="card">
+                    <h5 class="card-header">Wins</h5>
+                    <div class="card-body">
+                        <h5 class="card-title" id="wins-text">0</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <h5 class="card-header">Loses</h5>
+                    <div class="card-body">
+                        <h5 class="card-title" id="losses-text">0</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                    <h5 class="card-header">Ties</h5>
+                    <div class="card-body">
+                        <h5 class="card-title" id="ties-text">0</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-6">
+                    <div class="card">
+                        <h5 class="card-header">Pick One</h5>
+                        <div class="card-body">
+                            <button class="btn btn-dark w-100 mb-2" id="rock-button">Rock</button>
+                            <button class="btn btn-dark w-100 mb-2" id="paper-button">Paper</button>
+                            <button class="btn btn-dark w-100 mb-2" id="scissor-button">Scissor</button>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="card">
+                        <h5 class="card-header">Enemy Picked</h5>
+                        <div class="card-body">
+                            <button class="btn btn-dark w-100 mb-2" disabled>Rock</button>
+                            <button class="btn btn-dark w-100 mb-2" disabled>Paper</button>
+                            <button class="btn btn-dark w-100 mb-2" disabled>Scissor</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="card h-100">
+                        <h5 class="card-header">Chat</h5>
+                        <div class="card-body text-left">
+                            <p>asdfljkasf</p>
+                        </div>
+                        <div class="card-footer">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="text-input">
+                                <button type="button" class="btn btn-primary" id="send-button">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <!-- bootstrap CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -28,8 +107,9 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.4.1.js"
-        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
     <!-- scripts -->
     <script src="./assets/scripts/key.js"></script>
     <script src="./assets/scripts/script.js"></script>
