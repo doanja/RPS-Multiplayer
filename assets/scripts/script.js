@@ -1,5 +1,21 @@
 let database;
 
+function clickedRPS() {
+  var clicked = $(this).attr('value');
+
+  database
+    .ref()
+    .push({
+      choice: clicked
+    })
+    .then(() => {
+      console.log('Push succeeded');
+    })
+    .catch(err => {
+      console.log('Error adding to database', err.code);
+    });
+}
+
 const getSchedule = db => {
   db.ref().on(
     'value',
@@ -35,7 +51,9 @@ window.onload = () => {
   // --------------------------------------------------------------
   // Link to Firebase Database for viewer tracking
   let connectionsRef = database.ref('/connections');
+  console.log('connectionsRef :', connectionsRef);
   let connectedRef = database.ref('.info/connected');
+  console.log('connectedRef :', connectedRef);
 
   // Add ourselves to presence list when online.
   connectedRef.on('value', function(snap) {
@@ -51,5 +69,5 @@ window.onload = () => {
   });
 
   getSchedule(database);
-  //   $()
+  $(document).on('click', '.rps-btn', clickedRPS);
 };
